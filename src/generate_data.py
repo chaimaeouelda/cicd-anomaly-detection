@@ -1,4 +1,4 @@
-﻿import numpy as np, pandas as pd
+import numpy as np, pandas as pd
 
 rng = np.random.default_rng(42)
 N_NORMAL = 5000

@@ -1,4 +1,4 @@
-﻿import numpy as np, torch, torch.nn as nn
+import numpy as np, torch, torch.nn as nn
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt

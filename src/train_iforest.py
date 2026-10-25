@@ -1,4 +1,4 @@
-﻿import numpy as np, joblib
+import numpy as np, joblib
 from sklearn.ensemble import IsolationForest
 from sklearn.metrics import roc_auc_score, precision_score, recall_score, f1_score
 

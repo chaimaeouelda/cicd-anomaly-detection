@@ -1,4 +1,4 @@
-﻿import torch.nn as nn
+import torch.nn as nn
 
 class AutoEncoder(nn.Module):
     def __init__(self, n_features, latent=4):

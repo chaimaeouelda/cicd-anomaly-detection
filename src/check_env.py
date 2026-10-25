@@ -1,4 +1,4 @@
-﻿import sys, numpy, pandas, sklearn, torch
+import sys, numpy, pandas, sklearn, torch
 print("=== CHECK ENVIRONNEMENT ===")
 print("Python       :", sys.version.split()[0])
 print("NumPy        :", numpy.__version__)

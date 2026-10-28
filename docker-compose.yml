@@ -8,3 +8,19 @@ services:
       - ./models:/app/models
       - ./tests:/app/tests
       - ./reports:/app/reports
+      - ./scripts:/app/scripts
+      - ./samples:/app/samples
+  api:
+    build: .
+    image: cicd-anomaly:latest
+    command: uvicorn src.api:app --host 0.0.0.0 --port 8000
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./src:/app/src
+      - ./models:/app/models
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
+      interval: 10s
+      timeout: 5s
+      retries: 5

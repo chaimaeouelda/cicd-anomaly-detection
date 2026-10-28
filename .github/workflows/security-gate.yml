@@ -1,0 +1,46 @@
+name: Security Gate (anomaly detection)
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  anomaly-gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build de l'image
+        run: docker compose build
+
+      - name: Entrainement des modeles
+        run: |
+          for m in generate_data features train_autoencoder train_iforest compare_scores tune_hybrid; do
+            docker compose run --rm ml python -m src.$m
+          done
+
+      - name: Demarrage de l'API
+        run: |
+          docker compose up -d api
+          for i in $(seq 1 30); do
+            curl -sf http://localhost:8000/health && break
+            sleep 2
+          done
+
+      - name: Gate - pipeline normal (doit passer)
+        run: python3 scripts/gate.py samples/normal.json
+
+      - name: Gate - pipeline suspect (doit etre bloque)
+        run: |
+          if python3 scripts/gate.py samples/suspicious.json; then
+            echo "ERREUR : le pipeline suspect n'a pas ete bloque"
+            exit 1
+          else
+            echo "OK : pipeline suspect bloque comme attendu"
+          fi
+
+      - name: Logs de l'API en cas d'echec
+        if: failure()
+        run: docker compose logs api

@@ -2,21 +2,6 @@
 
 Modèle hybride **Autoencoder + Isolation Forest**, exécuté sous **Docker**, pour détecter et bloquer les exécutions de pipelines suspectes (vol de secrets, cryptomining, commits malveillants).
 
-![Progression](https://img.shields.io/badge/progression-80%25-blue)
-
-## Progression (suivi de certification)
-
-**80 % complété** : semaines 1, 2 et 3 terminées.
-
-| Semaine | Contenu | Poids | État |
-|---|---|---|---|
-| 1 | Setup Docker + Données | 25 % | ✅ Terminée |
-| 2 | Autoencoder + Isolation Forest | 30 % | ✅ Terminée |
-| 3 | Modèle hybride + API + intégration CI/CD | 25 % | Terminée |
-| 4 | Évaluation, tests, rapport | 20 % | À faire |
-
-Détail des tâches : [docs/PROGRESS.md](docs/PROGRESS.md)
-
 ## Architecture
 
 ```mermaid

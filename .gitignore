@@ -7,3 +7,4 @@ models/*
 !models/.gitkeep
 reports/*
 !reports/.gitkeep
+!reports/*.png

@@ -24,3 +24,12 @@ docker compose run --rm ml python -m src.visualize_data
 - `src/` : scripts Python (exploration, features, visualisation, modèles)
 - `data/`, `models/`, `reports/` : données, modèles entraînés, graphiques (non versionnés)
 - `Dockerfile`, `docker-compose.yml`, `requirements.txt` : environnement reproductible
+## Visualisation du dataset
+
+Distribution des variables clés, par type d'exécution (les attaques se démarquent du trafic normal) :
+
+![Distributions des variables](reports/data_distributions.png)
+
+Exécutions par heure (les attaques se concentrent la nuit) :
+
+![Exécutions par heure](reports/data_hours.png)

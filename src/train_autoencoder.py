@@ -47,6 +47,6 @@ for ep in range(1, EPOCHS + 1):
 
 plt.plot(hist_tr, label="train"); plt.plot(hist_val, label="validation")
 plt.xlabel("epoch"); plt.ylabel("MSE"); plt.legend(); plt.title("Autoencoder")
-plt.savefig("reports/ae_loss.png", dpi=120)
+plt.savefig("reports/02-modeles/ae_loss.png", dpi=120)
 print("Meilleure loss validation :", round(best, 4))
 print("Modele sauvegarde : models/autoencoder.pt")

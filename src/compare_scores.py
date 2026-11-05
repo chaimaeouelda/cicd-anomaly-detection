@@ -37,5 +37,5 @@ for name, te in [("Autoencoder", ae_te), ("IsolationForest", if_te)]:
 plt.plot([0, 1], [0, 1], "k--")
 plt.xlabel("Taux de faux positifs"); plt.ylabel("Taux de vrais positifs")
 plt.legend(); plt.title("Courbes ROC")
-plt.savefig("reports/roc_base.png", dpi=120)
+plt.savefig("reports/02-modeles/roc_base.png", dpi=120)
 print("Scores sauvegardes : data/scores.npz")

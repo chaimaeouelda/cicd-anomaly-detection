@@ -31,3 +31,4 @@ Les graphiques sont rangés par étape dans le dossier [`reports/`](reports) :
 
 - [Visualisation du dataset](reports/01-dataset) : répartition des classes, distributions des variables, activité par heure
 - [Résultats des modèles de base](reports/02-modeles) : entraînement de l'autoencoder, erreurs de reconstruction, courbes ROC
+- [Modèle hybride](reports/03-hybride) : courbes ROC et choix du poids w

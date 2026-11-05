@@ -5,3 +5,4 @@ data/*
 !data/.gitkeep
 models/*
 !models/.gitkeep
+!data/cicd_logs.csv

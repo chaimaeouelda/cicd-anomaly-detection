@@ -3,6 +3,6 @@ __pycache__/
 .venv/
 data/*
 !data/.gitkeep
+!data/cicd_logs.csv
 models/*
 !models/.gitkeep
-!data/cicd_logs.csv

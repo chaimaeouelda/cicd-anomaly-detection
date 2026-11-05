@@ -1,0 +1,82 @@
+{
+  "passed": true,
+  "precision": 0.95,
+  "recall": 0.76,
+  "f1": 0.8444444444444444,
+  "core_recall": 0.9833333333333333,
+  "core_fpr": 0.0,
+  "confusion": {
+    "tn": 186,
+    "fp": 4,
+    "fn": 24,
+    "tp": 76
+  },
+  "meta": {
+    "attack_crypto_mining": {
+      "group": "core",
+      "expected": "BLOCK"
+    },
+    "attack_supply_chain_unseen": {
+      "group": "stress",
+      "expected": "BLOCK"
+    },
+    "normal_nightly_build": {
+      "group": "stress",
+      "expected": "ALLOW"
+    },
+    "attack_secret_exfil_subtle": {
+      "group": "stress",
+      "expected": "BLOCK"
+    },
+    "normal_regular": {
+      "group": "core",
+      "expected": "ALLOW"
+    },
+    "attack_malicious_commit": {
+      "group": "core",
+      "expected": "BLOCK"
+    },
+    "attack_secret_exfil": {
+      "group": "core",
+      "expected": "BLOCK"
+    },
+    "normal_release_day": {
+      "group": "stress",
+      "expected": "ALLOW"
+    }
+  },
+  "scenarios": {
+    "attack_crypto_mining": {
+      "n": 20,
+      "ok": 19
+    },
+    "attack_supply_chain_unseen": {
+      "n": 20,
+      "ok": 9
+    },
+    "normal_nightly_build": {
+      "n": 20,
+      "ok": 20
+    },
+    "attack_secret_exfil_subtle": {
+      "n": 20,
+      "ok": 8
+    },
+    "normal_regular": {
+      "n": 150,
+      "ok": 150
+    },
+    "attack_malicious_commit": {
+      "n": 20,
+      "ok": 20
+    },
+    "attack_secret_exfil": {
+      "n": 20,
+      "ok": 20
+    },
+    "normal_release_day": {
+      "n": 20,
+      "ok": 16
+    }
+  }
+}

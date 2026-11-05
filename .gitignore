@@ -8,3 +8,4 @@ models/*
 reports/*
 !reports/.gitkeep
 !reports/*.png
+!reports/*.png
